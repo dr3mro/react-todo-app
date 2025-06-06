@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { TodoContext } from "../Todo";
+import { TodoContext } from "../TodoContext";
 
 function AddTaskBtn(){
     const {handleAddTask} = useContext(TodoContext);

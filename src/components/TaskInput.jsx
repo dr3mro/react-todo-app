@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { TodoContext } from "../Todo";
+import { TodoContext } from "../TodoContext";
 import AddTaskBtn from "./AddTaskBtn";
 
 function TaskInput(){

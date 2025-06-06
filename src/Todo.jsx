@@ -1,9 +1,8 @@
-import { createContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import TaskInput from "./components/TaskInput";
 import TaskList from "./components/TaskList";
 import Title from './components/Title';
-
-export const TodoContext = createContext();
+import { TodoContext } from "./TodoContext";
 
 function Todo(){
     const [tasks, setTasks] = useState([]);
@@ -56,8 +55,7 @@ function Todo(){
                                         handleAddTask, 
                                         handleTaskInput, 
                                         handleRemoveTask, 
-                                        handleMoveUp, 
-                                        handleMoveDown}}>
+                                        handleMoveUp, handleMoveDown}}>
                 <TaskList/>
                 <TaskInput/>
             </TodoContext.Provider>
