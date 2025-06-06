@@ -32,7 +32,7 @@ function Todo(){
         const newTasks = [...tasks];
         newTasks.splice(index, 1);
         setTasks(newTasks);
-        localStorage.setItem("tasks", JSON.stringify(tasks));
+        localStorage.setItem("tasks", JSON.stringify(newTasks));
     }
     function handleMoveUp(index){
         if(index === 0) return;
