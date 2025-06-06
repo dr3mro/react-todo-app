@@ -1,7 +1,10 @@
+import { useContext } from "react";
+import { TodoContext } from "../Todo";
 import AddTaskBtn from "./AddTaskBtn";
 
-function TaskInput({task,handleTaskInput,handleAddTask}){
+function TaskInput(){
 
+    const {task,handleTaskInput,handleAddTask} = useContext(TodoContext);
 
     return (
         <form className="task-input-container" onSubmit={handleAddTask}>

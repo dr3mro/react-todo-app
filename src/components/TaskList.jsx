@@ -1,17 +1,18 @@
+import { useContext } from "react";
+import { TodoContext } from "../Todo";
 import TaskCard from "./TaskCard";
 
+function TaskList(){
 
-function TaskList({tasks,handleMoveUp,handleMoveDown,handleRemoveTask}){
+    const {tasks} = useContext(TodoContext);
+    
     return (
         <div className="task-list">
             {tasks.map((task,index) => 
             <TaskCard 
                 key={index}
                 index={index} 
-                task={task} 
-                handleMoveUp={handleMoveUp} 
-                handleMoveDown={handleMoveDown} 
-                handleRemoveTask={handleRemoveTask}/>)}
+                task={task}/>)}
         </div>
     )
 }
