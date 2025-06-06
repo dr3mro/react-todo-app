@@ -10,7 +10,6 @@ function Todo(){
 
     function handleTaskInput(e){
         setTask(e.target.value);
-        console.log(task);  
     }
 
     function handleAddTask(e){
