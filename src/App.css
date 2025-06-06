@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+}
+body {
+  margin: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.todo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: lightgray;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 25px 25px 25px 25px; 
+  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.2);
+  height: 100vh;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: brown;
+}
+
+.task-input {
+  font-size: 1.5rem;
+  background-color: rgb(246, 246, 246);
+  border-radius: 5px;
+  border: 1px solid hsla(0, 1%, 21%, 0.25);
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
+  color: blue;
+  flex: 1;
+  padding: 10px;
+  max-width: 600px;
+}
+
+.add-task-button {
+  font-size: 1.5rem;
+  background-color: rgb(24, 201, 0);
+  border-radius: 5px;
+  border: none;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.task-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+
+}
+
+.task-list{
+  flex:1;
+  width: 100%;
+}
+
+.task-card{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(246, 246, 246);
+  border-radius: 5px;
+  border: 1px solid hsla(0, 1%, 21%, 0.25);
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
+  color: blue;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.task-detail {
+  flex: 1;
+  margin-right: 10px;
+  font-size: 1.25rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+.card-button{
+  font-size: 2rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.rm-button{
+  background-color: rgb(255, 154, 154);
+  color: rgb(255, 255, 255);
+}
+
+.mv-button{
+  background-color: rgb(116, 116, 255);
+}
+
+.completed-task {
+  text-decoration: line-through;
+  color: rgb(128, 128, 128);
+}
