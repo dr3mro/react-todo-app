@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TaskInput from "./components/TaskInput";
 import TaskList from "./components/TaskList";
 import Title from './components/Title';
@@ -8,6 +8,13 @@ function Todo(){
     const [tasks, setTasks] = useState([]);
     const [task, setTask] = useState("");
 
+    useEffect(() => {
+        const tasks = JSON.parse(localStorage.getItem("tasks"));
+        if(tasks){
+            setTasks(tasks);
+        }
+    }, []);
+
     function handleTaskInput(e){
         setTask(e.target.value);
     }
@@ -15,13 +22,17 @@ function Todo(){
     function handleAddTask(e){
         e.preventDefault();
         if (!task.trim()) return;
-        setTasks((tasks) => {return [...tasks, task]});
+        const newTasks = [...tasks, task];
+        setTasks(newTasks);
         setTask("");
+        localStorage.setItem("tasks", JSON.stringify(newTasks));
     }
+
     function handleRemoveTask(index){
         const newTasks = [...tasks];
         newTasks.splice(index, 1);
         setTasks(newTasks);
+        localStorage.setItem("tasks", JSON.stringify(tasks));
     }
     function handleMoveUp(index){
         if(index === 0) return;
