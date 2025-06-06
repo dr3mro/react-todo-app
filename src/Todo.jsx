@@ -30,7 +30,6 @@ function Todo(){
         setTasks(newTasks);
     }
     function handleMoveDown(index){
-        console.log(index);
         if(index === tasks.length - 1) return;
         const newTasks = [...tasks];
         [newTasks[index], newTasks[index + 1]] = [newTasks[index + 1], newTasks[index]];
@@ -40,8 +39,8 @@ function Todo(){
     return (
         <div className="todo">
             <Title/>
-            <TaskInput task={task} handleTaskInput={handleTaskInput} handleAddTask={handleAddTask}/>
             <TaskList tasks={tasks} handleRemoveTask={handleRemoveTask} handleMoveUp={handleMoveUp} handleMoveDown={handleMoveDown}/>
+            <TaskInput task={task} handleTaskInput={handleTaskInput} handleAddTask={handleAddTask}/>
         </div>
     )
 }

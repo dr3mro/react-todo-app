@@ -1,8 +1,4 @@
 function TaskDetail({task}){
-    return (
-        <div className="task-detail">
-            <h1>{task}</h1>
-        </div>
-    )
+    return (<h1 className="task-detail">{task}</h1>)
 }
 export default TaskDetail;
