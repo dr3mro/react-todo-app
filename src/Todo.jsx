@@ -56,8 +56,8 @@ function Todo(){
                                         handleTaskInput, 
                                         handleRemoveTask, 
                                         handleMoveUp, handleMoveDown}}>
-                <TaskList/>
                 <TaskInput/>
+                <TaskList/>  
             </TodoContext.Provider>
         </div>
     )
