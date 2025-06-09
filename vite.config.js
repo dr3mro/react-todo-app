@@ -9,7 +9,12 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: "autoUpdate",
-      includeAssets: ["favicon.svg", "robots.txt"],
+      includeAssets: [
+        "favicon.svg",
+        "robots.txt",
+        "assets/icon-192.png",
+        "assets/icon-512.png",
+      ],
       manifest: {
         name: "ToDo App",
         short_name: "App",
