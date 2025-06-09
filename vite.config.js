@@ -11,7 +11,7 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["favicon.svg", "robots.txt"],
       manifest: {
-        name: "Shopping List",
+        name: "ToDo App",
         short_name: "App",
         start_url: "/react-todo-app",
         display: "standalone",
